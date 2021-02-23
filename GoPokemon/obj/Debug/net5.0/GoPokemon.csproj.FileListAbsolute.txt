@@ -439,13 +439,10 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.genru
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml.g.cs
-C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ExternalLogin.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ForgotPassword.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Lockout.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
-C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LoginWith2fa.cshtml.g.cs
-C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml.g.cs
@@ -475,3 +472,5 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Ide
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\colin\source\repos\GoPokemon\GoPokemon\bin\Debug\net5.0\SendGrid.dll
+C:\Users\colin\source\repos\GoPokemon\GoPokemon\bin\Debug\net5.0\StarkbankEcdsa.dll
