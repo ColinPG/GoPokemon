@@ -21,7 +21,9 @@
   <ItemGroup>
     <Folder Include="Areas\Cards\Controllers\" />
     <Folder Include="Areas\Cards\Data\" />
+    <Folder Include="Areas\Cards\Models\" />
     <Folder Include="Areas\Cards\Views\" />
+    <Folder Include="wwwroot\CardImages\" />
   </ItemGroup>
 
 </Project>

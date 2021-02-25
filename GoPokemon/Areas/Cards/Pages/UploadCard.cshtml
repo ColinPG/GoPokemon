@@ -5,4 +5,16 @@
 <div class="text-center">
     
     <img src="~/img/UploadPokeFont.png" />
+    <form enctype="multipart/form-data" method="post">
+        <dl>
+            <dt>
+                <label asp-for="CardImage"></label>
+            </dt>
+            <dd>
+                <input asp-for="CardImage" accept="image/*"/>
+                <span asp-validation-for="CardImage"></span>
+            </dd>
+        </dl>
+        <input class="btn" type="submit" value="Upload" />
+    </form>
 </div>
