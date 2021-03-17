@@ -75,8 +75,6 @@ body {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    position: center;
-    display: inline-block;
 }
 
     /* On mouse-over, add a deeper shadow */
@@ -132,10 +130,10 @@ speechBubble::before {
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    display: inline-block;
 }
 
 .flip-card-inner {
-    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -149,7 +147,7 @@ speechBubble::before {
 }
 
 .flip-card-front, .flip-card-back {
-    position: absolute;
+   
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -165,6 +163,11 @@ speechBubble::before {
     /*background-color: Red;*/
     color: white;
     transform: rotateY(180deg);
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
 }
 /*added adition moving backgorund*/
 /*@keyframes cube {

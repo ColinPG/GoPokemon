@@ -4,39 +4,67 @@
 }
 <div class="text-center">
     <img src="~/img/CardIndex.png" />
-    <h1>TBD</h1>
+    <h1>Base Set</h1>
 </div>
 <!-- Iterate through all cards here
 foreach (var item in Model.Cards) -->
+<div class="wrapper">
+    @for (int i = 0; i < 102; i++)
+    {
+        <div class="flip-card" style="display: inline-block;">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back" style="background-color:yellow; color:black">
+                    <h1>@Model.Cards[i].Name</h1>
+                    <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
+                    <p>@Model.Cards[i].Set.Name</p>
+                </div>
+            </div>
+        </div>
+        i++;
+        <div class="flip-card" style="display: inline-block">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back" style="background-color:yellow;color:black">
+                    <h1>@Model.Cards[i].Name</h1>
+                    <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
+                    <p>@Model.Cards[i].Set.Name</p>
+                </div>
+            </div>
+        </div>
+        i++;
+        <div class="flip-card"style="display: inline-block" >
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back" style="background-color:yellow;color:black">
+                    <h1>@Model.Cards[i].Name</h1>
+                    <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
+                    <p>@Model.Cards[i].Set.Name</p>
+                </div>
+            </div>
+        </div>
 
-@for (int i = 0; i < 102; i++)
-{
+
+    }
+</div>
+
+    <!--
     <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-                <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
+                <img src="~/img/Pikachu.jpg" alt="Pikachu Card" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back" style="background-color:yellow;">
-                <h1>@Model.Cards[i].Name</h1>
-                <p>@Model.Cards[i].CollectionNumber</p>
-                <p>@Model.Cards[i].Set</p>
+                <h1>Pikachu</h1>
+                <p>Card Type: Electric</p>
+                <p>Health: 60</p>
             </div>
         </div>
     </div>
-}
-
-
-<!--
-<div class="flip-card">
-    <div class="flip-card-inner">
-        <div class="flip-card-front">
-            <img src="~/img/Pikachu.jpg" alt="Pikachu Card" style="width:300px;height:300px;">
-        </div>
-        <div class="flip-card-back" style="background-color:yellow;">
-            <h1>Pikachu</h1>
-            <p>Card Type: Electric</p>
-            <p>Health: 60</p>
-        </div>
-    </div>
-</div>
-    -->
+        -->
