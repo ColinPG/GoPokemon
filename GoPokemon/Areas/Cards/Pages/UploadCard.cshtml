@@ -11,9 +11,28 @@
                 <label asp-for="CardImage"></label>
             </dt>
             <dd>
-                <input asp-for="CardImage" accept="image/*"/>
+                <input asp-for="CardImage" accept="image/*" />
                 <span asp-validation-for="CardImage"></span>
-            </dd>
+            </dd> 
+        </dl>
+        <dl>
+            <label asp-for="@Model.Input.CardName">Choose a Card:</label>
+            <select asp-for="@Model.Input.CardName">
+                @foreach (var item in Model.Cards)
+                {
+                    <option value="@item.Name">@item.Name</option>
+
+                }
+            </select>
+        </dl>
+        <dl>
+            <label asp-for="@Model.Input.Quantity">Quantity</label>
+            <select asp-for="@Model.Input.Quantity">
+                @for (int i = 1; i < 101; i++)
+                {
+                <option value="@i">@i</option>
+                }
+            </select>
         </dl>
         <input class="btn" type="submit" value="Upload" />
     </form>

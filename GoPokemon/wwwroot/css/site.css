@@ -71,16 +71,16 @@ body {
   line-height: 60px; /* Vertically center the text there */
 }
 /*added addition of caard containers with effects*/
-.card {
+/*.card {*/
     /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-}
+}*/
 
     /* On mouse-over, add a deeper shadow */
-    .card:hover {
+    /*.card:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    }
+    }*/
 
 /* Add some padding inside the card container */
 .container {
@@ -123,17 +123,15 @@ speechBubble::before {
     border-bottom-color: #fff;
     filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
 }
-
-/*FLip card Css*/
 .flip-card {
     background-color: transparent;
     width: 300px;
     height: 300px;
     perspective: 1000px;
-    display: inline-block;
 }
 
 .flip-card-inner {
+    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -147,7 +145,7 @@ speechBubble::before {
 }
 
 .flip-card-front, .flip-card-back {
-   
+    position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden;
@@ -160,91 +158,55 @@ speechBubble::before {
 }
 
 .flip-card-back {
-    /*background-color: Red;*/
+    background-color: #2980b9;
     color: white;
     transform: rotateY(180deg);
 }
 .wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    /*gap: 10px;*/
 }
-/*added adition moving backgorund*/
-/*@keyframes cube {
-    from {
-        transform: scale(0) rotate(0deg) translate(-50%, -50%);
-        opacity: 1;
-    }
-
-    to {
-        transform: scale(20) rotate(960deg) translate(-50%, -50%);
-        opacity: 0;
-    }
+    /*FLip card Css*/
+    /*.flip-card {
+    position: absolute;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    display: inline-block;
 }
 
-.background {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    background: #0040C1;
-    overflow: hidden;
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-    .background li {
-        position: absolute;
-        top: 80vh;
-        left: 45vw;
-        width: 10px;
-        height: 10px;
-        border: solid 1px #0039ad;
-        color: transparent;
-        transform-origin: top left;
-        transform: scale(0) rotate(0deg) translate(-50%, -50%);
-        animation: cube 7s ease-in forwards infinite;
-    }
-
-undefined
-.background li:nth-child(0) {
-    animation-delay: 0s;
-    left: 23vw;
-    top: 97vh;
-    border-color: #0046d4;
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.background li:nth-child(1) {
-    animation-delay: 2s;
-    left: 9vw;
-    top: 56vh;
+.flip-card-front, .flip-card-back {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
-.background li:nth-child(2) {
-    animation-delay: 4s;
-    left: 86vw;
-    top: 39vh;
-    border-color: #0046d4;
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
 }
 
-.background li:nth-child(3) {
-    animation-delay: 6s;
-    left: 78vw;
-    top: 2vh;
-}
-
-.background li:nth-child(4) {
-    animation-delay: 8s;
-    left: 48vw;
-    top: 26vh;
-    border-color: #0046d4;
-}
-
-.background li:nth-child(5) {
-    animation-delay: 10s;
-    left: 65vw;
-    top: 74vh;
-    border-color: #0046d4;
+.flip-card-back {*/
+    /*background-color: Red;*/
+    /*color: white;
+    transform: rotateY(180deg);
 }
 */
