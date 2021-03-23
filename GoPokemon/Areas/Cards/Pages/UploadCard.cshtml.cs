@@ -76,10 +76,11 @@ namespace GoPokemon.Areas.Cards.Views
                 {
                     newCard = new UserCard
                     {
-                        UserId=user.Id,
+                        UserId = user.Id,
                         CardId = card.Id,
                         //Quantity = quantity,
-                        DateCreated = DateTime.Now
+                        DateCreated = DateTime.Now,
+                        ConditionId = null
                     };
                     _context.UserCards.Add(newCard);
                 }
