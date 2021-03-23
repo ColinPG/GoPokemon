@@ -65,11 +65,12 @@ namespace GoPokemon.Areas.Identity.Pages.Account
                 Credentials = new NetworkCredential(config["Smtp:Username"], config["Smtp:Password"]),
                 EnableSsl = true,
             };
+            smtpClient.EnableSsl = true;
             smtpClient.Send(config["Smtp:Username"],
                 email,
                 "Confirm your email",
                 $"Please confirm your account by {EmailConfirmationUrl}");
-
+            
             return Page();
         }
     }

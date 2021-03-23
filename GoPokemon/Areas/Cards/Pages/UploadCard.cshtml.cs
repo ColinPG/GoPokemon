@@ -16,7 +16,7 @@ namespace GoPokemon.Areas.Cards.Views
 {
     public class UploadCardModel : PageModel
     {
-        private readonly UserManager<User> _userManager;
+        private readonly UserManager<IdentityUser> _userManager;
         [BindProperty]
         public IFormFile CardImage { get; set; }
         [BindProperty]
@@ -24,7 +24,7 @@ namespace GoPokemon.Areas.Cards.Views
         private readonly IWebHostEnvironment _hostEnvironment;
 
         public UploadCardModel(
-            UserManager<User> userManager, IWebHostEnvironment hostEnvironment, GoPokemonContext context)
+            UserManager<IdentityUser> userManager, IWebHostEnvironment hostEnvironment, GoPokemonContext context)
         {
             _userManager = userManager;
             _hostEnvironment = hostEnvironment;
@@ -66,8 +66,6 @@ namespace GoPokemon.Areas.Cards.Views
                 {
                     await CardImage.CopyToAsync(fileStream);
                 }
-
-
                 // Create a new usercard if no usercard exists
                 var user = await _userManager.GetUserAsync(User);
                 Card card = _context.Cards.Where(a => a.Name == Input.CardName).First();
@@ -78,7 +76,7 @@ namespace GoPokemon.Areas.Cards.Views
                 {
                     newCard = new UserCard
                     {
-                        Id = Guid.NewGuid(),
+                        UserId=user.Id,
                         CardId = card.Id,
                         //Quantity = quantity,
                         DateCreated = DateTime.Now

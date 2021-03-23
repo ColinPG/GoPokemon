@@ -21,6 +21,7 @@ namespace GoPokemon.Models
         public string Name { get; set; }
         public string TrackingNo { get; set; }
         public bool IsFirstEdition { get; set; }
+        public double? Value { get; set; }
 
         public virtual CardSet Set { get; set; }
         public virtual ICollection<EnergyCard> EnergyCards { get; set; }
