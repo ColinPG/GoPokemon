@@ -36,6 +36,8 @@ namespace GoPokemon.Areas.Cards.Views
             public string CardName { get; set; }
             [Display(Name = "Quantity")]
             public int Quantity { get; set; }
+            [Display(Name = "Condition")]
+            public int Condition { get; set; }
         }
 
         private GoPokemonContext _context;
@@ -56,6 +58,7 @@ namespace GoPokemon.Areas.Cards.Views
             {
                 string cardName = Input.CardName;
                 int quantity = Input.Quantity;
+                int condition = Input.Condition;
 
                 string wwwRootPath = _hostEnvironment.WebRootPath;
                 string fileName = Path.GetFileNameWithoutExtension(CardImage.FileName);
@@ -78,9 +81,9 @@ namespace GoPokemon.Areas.Cards.Views
                     {
                         UserId = user.Id,
                         CardId = card.Id,
-                        //Quantity = quantity,
+                        Quantity = quantity,
                         DateCreated = DateTime.Now,
-                        ConditionId = null
+                        ConditionId = condition.ToString()
                     };
                     _context.UserCards.Add(newCard);
                 }

@@ -13,7 +13,7 @@
             <dd>
                 <input asp-for="CardImage" accept="image/*" />
                 <span asp-validation-for="CardImage"></span>
-            </dd> 
+            </dd>
         </dl>
         <dl>
             <label asp-for="@Model.Input.CardName">Choose a Card:</label>
@@ -30,8 +30,16 @@
             <select asp-for="@Model.Input.Quantity">
                 @for (int i = 1; i < 101; i++)
                 {
-                <option value="@i">@i</option>
+                    <option value="@i">@i</option>
                 }
+            </select>
+        </dl>
+        <dl>
+            <label asp-for="@Model.Input.Condition">Condiiton</label>
+            <select asp-for="@Model.Input.Condition">
+                    <option value="1">Mint</option>
+                    <option value="2">Near Mint</option>
+                    <option value="3">Played</option>                
             </select>
         </dl>
         <input class="btn" type="submit" value="Upload" />
