@@ -39,7 +39,7 @@ namespace GoPokemon.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=LAPTOP-5J8EOHL2\\SQLEXPRESS;Database=GoPokemon;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-DIEU4LO3\\SQLEXPRESS;Database=GoPokemon;Trusted_Connection=True;");
             }
         }
 
@@ -164,7 +164,7 @@ namespace GoPokemon.Models
                     .WithMany(p => p.Cards)
                     .HasForeignKey(d => d.SetId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__Card__SetId__08B54D69");
+                    .HasConstraintName("FK__Card__SetId__6D0D32F4");
             });
 
             modelBuilder.Entity<CardCondition>(entity =>
@@ -215,7 +215,7 @@ namespace GoPokemon.Models
                     .WithMany(p => p.EnergyCards)
                     .HasForeignKey(d => d.CardId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__EnergyCar__CardI__10566F31");
+                    .HasConstraintName("FK__EnergyCar__CardI__6E01572D");
             });
 
             modelBuilder.Entity<MonsterCard>(entity =>
@@ -238,19 +238,19 @@ namespace GoPokemon.Models
                     .WithMany(p => p.MonsterCards)
                     .HasForeignKey(d => d.CardId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MonsterCa__CardI__0B91BA14");
+                    .HasConstraintName("FK__MonsterCa__CardI__6EF57B66");
 
                 entity.HasOne(d => d.CardType)
                     .WithMany(p => p.MonsterCards)
                     .HasForeignKey(d => d.CardTypeId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MonsterCa__CardT__0C85DE4D");
+                    .HasConstraintName("FK__MonsterCa__CardT__6FE99F9F");
 
                 entity.HasOne(d => d.Stage)
                     .WithMany(p => p.MonsterCards)
                     .HasForeignKey(d => d.StageId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__MonsterCa__Stage__0D7A0286");
+                    .HasConstraintName("FK__MonsterCa__Stage__70DDC3D8");
             });
 
             modelBuilder.Entity<TrainerCard>(entity =>
@@ -267,13 +267,13 @@ namespace GoPokemon.Models
                     .WithMany(p => p.TrainerCards)
                     .HasForeignKey(d => d.CardId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__TrainerCa__CardI__1332DBDC");
+                    .HasConstraintName("FK__TrainerCa__CardI__71D1E811");
             });
 
             modelBuilder.Entity<UserCard>(entity =>
             {
                 entity.HasKey(e => new { e.UserId, e.CardId })
-                    .HasName("PK__UserCard__E2D72096F3CA2A3E");
+                    .HasName("PK__UserCard__E2D72096F7DA81F0");
 
                 entity.ToTable("UserCard");
 
@@ -294,19 +294,19 @@ namespace GoPokemon.Models
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.CardId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__CardId__2EDAF651");
+                    .HasConstraintName("FK__UserCard__CardId__540C7B00");
 
                 entity.HasOne(d => d.Condition)
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.ConditionId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__Condit__2FCF1A8A");
+                    .HasConstraintName("FK__UserCard__Condit__55009F39");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__UserId__2DE6D218");
+                    .HasConstraintName("FK__UserCard__UserId__531856C7");
             });
 
             OnModelCreatingPartial(modelBuilder);

@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Identity;
 
 namespace GoPokemon.Models
 {
-    public class User : IdentityUser
-    {
+    //public class User : IdentityUser
+    //{
 
-    }
+    //}
 }

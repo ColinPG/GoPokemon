@@ -937,7 +937,6 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.Razor
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\CardsIndex.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\Error.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\ResultCard.cshtml.g.cs
-C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\ScannedCards.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\UploadCard.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\_StatusMessage.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\_ValidationScriptsPartial.cshtml.g.cs
@@ -988,3 +987,4 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.pdb
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.genruntimeconfig.cache
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\MyCards.cshtml.g.cs
+C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\MyCards.cshtml.g.cs

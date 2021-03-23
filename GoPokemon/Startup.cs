@@ -1,4 +1,5 @@
 
+using GoPokemon.Data;
 using GoPokemon.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -61,7 +62,7 @@ namespace GoPokemon
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseDeveloperExceptionPage();
             app.UseAuthentication();
             app.UseAuthorization();
 

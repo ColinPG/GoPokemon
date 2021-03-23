@@ -2,7 +2,6 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\GoPokemon.
 C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\GoPokemon.Views.pdb
 C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\appsettings.json
-C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\GoPokemon.StaticWebAssets.xml
 C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\GoPokemon.exe
 C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\NUnit3.TestAdapter.dll
 C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\NUnit3.TestAdapter.pdb
