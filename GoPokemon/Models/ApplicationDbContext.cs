@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace GoPokemon.Models
 {
-    public partial class GoPokemonContext : DbContext
+    public partial class ApplicationDbContext : DbContext
     {
-        public GoPokemonContext()
+        public ApplicationDbContext()
         {
         }
 
-        public GoPokemonContext(DbContextOptions<GoPokemonContext> options)
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }

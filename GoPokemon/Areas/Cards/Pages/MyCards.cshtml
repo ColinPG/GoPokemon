@@ -1,5 +1,5 @@
 ﻿@page
-@model GoPokemon.Areas.Cards.ScannedCardsModel
+@model GoPokemon.Areas.Cards.MyCardsIndexModel
 @{
 }
 <div class="text-center">
@@ -7,37 +7,59 @@
 </div>
 
 <!-- Flip Card-->
-    <center>
+<center>
     <h1>This is an Example of your scanned cards</h1>
-    </center>
-@foreach (var item in Model.)
-{
+</center>
+<div class="wrapper">
+    @foreach (var item in Model.Cards)
+    {
+        <div class="flip-card" style="display: inherit inline-block">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="~/img/@(item.Name +".jpg")" alt="@(item.Name + " Card")" style="width:300px;height:300px;">
+                </div>
+                <div class="flip-card-back" style="background-color:yellow; color:black;">
+                    <h1>@item.Name</h1>
+                    <p><bold>Collection Number: </bold>@item.CollectionNumber</p>
+                    <p>@item.Set.Name</p>
+                    <p>Quantity: ??</p>
+                    <p>Value: ??</p>
+                    <div>
+                        <button type="button" style="margin-top: auto">Add</button>
+                        <button type="button" style="margin-top: auto">Subtract</button>
+                    </div>
+                    <button type="button">Remove</button>
+                </div>
+            </div>
+        </div>
+        
 
-}
-    <center>
+    }
+</div>
+    <!--<center>
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <img src="~/img/Pikachu.jpg" alt="Pikachu Card" style="width:300px;height:300px;">
                 </div>
-                <div class="flip-card-back" style="background-color:yellow;" >
+                <div class="flip-card-back" style="background-color:yellow;">
                     <h1>Pikachu</h1>
                     <p>Card Type: Electric</p>
                     <p>Health: 60</p>
                 </div>
             </div>
-        </div>
-        <!--Add css to change the fill color ot match type-->
-        <div class="flip-card" >
+        </div>-->
+    <!--Add css to change the fill color ot match type-->
+    <!--<div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <img src="~/img/Charizard.jpg" alt="Charizard Card" style="width:300px;height:300px;">
                 </div>
-                <div class="flip-card-back" style="background-color:Red;" >
+                <div class="flip-card-back" style="background-color:Red;">
                     <h1>Charizard</h1>
                     <p>Card Type: Fire</p>
                     <p>Health: 150</p>
                 </div>
             </div>
         </div>
-    </center>
+    </center>-->
