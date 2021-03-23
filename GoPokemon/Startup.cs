@@ -1,4 +1,4 @@
-
+using GoPokemon.Data;
 using GoPokemon.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

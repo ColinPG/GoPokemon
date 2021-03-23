@@ -23,7 +23,6 @@
     <Folder Include="Areas\Cards\Data\" />
     <Folder Include="Areas\Cards\Models\" />
     <Folder Include="Areas\Cards\Views\" />
-    <Folder Include="Data\Migrations\" />
     <Folder Include="wwwroot\CardImages\" />
   </ItemGroup>
 

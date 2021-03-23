@@ -25,7 +25,6 @@ namespace GoPokemon.Models
         public virtual DbSet<AspNetUserRole> AspNetUserRoles { get; set; }
         public virtual DbSet<AspNetUserToken> AspNetUserTokens { get; set; }
         public virtual DbSet<Card> Cards { get; set; }
-        public virtual DbSet<CardCondition> CardConditions { get; set; }
         public virtual DbSet<CardSet> CardSets { get; set; }
         public virtual DbSet<CardStage> CardStages { get; set; }
         public virtual DbSet<CardType> CardTypes { get; set; }
@@ -158,22 +157,11 @@ namespace GoPokemon.Models
                     .IsRequired()
                     .HasMaxLength(30);
 
-                entity.Property(e => e.Value).HasDefaultValueSql("((0))");
-
                 entity.HasOne(d => d.Set)
                     .WithMany(p => p.Cards)
                     .HasForeignKey(d => d.SetId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Card__SetId__08B54D69");
-            });
-
-            modelBuilder.Entity<CardCondition>(entity =>
-            {
-                entity.ToTable("CardCondition");
-
-                entity.Property(e => e.Name)
-                    .IsRequired()
-                    .HasMaxLength(30);
             });
 
             modelBuilder.Entity<CardSet>(entity =>
@@ -272,12 +260,11 @@ namespace GoPokemon.Models
 
             modelBuilder.Entity<UserCard>(entity =>
             {
-                entity.HasKey(e => new { e.UserId, e.CardId })
-                    .HasName("PK__UserCard__E2D72096F3CA2A3E");
-
                 entity.ToTable("UserCard");
 
-                entity.Property(e => e.ConditionId)
+                entity.Property(e => e.Id).ValueGeneratedNever();
+
+                entity.Property(e => e.CardId)
                     .IsRequired()
                     .HasMaxLength(450);
 
@@ -286,27 +273,21 @@ namespace GoPokemon.Models
                     .HasColumnName("dateCreated")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.Quantity)
-                    .HasColumnName("quantity")
-                    .HasDefaultValueSql("((1))");
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .HasMaxLength(450);
 
                 entity.HasOne(d => d.Card)
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.CardId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__CardId__2EDAF651");
-
-                entity.HasOne(d => d.Condition)
-                    .WithMany(p => p.UserCards)
-                    .HasForeignKey(d => d.ConditionId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__Condit__2FCF1A8A");
+                    .HasConstraintName("FK__UserCard__CardId__17F790F9");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__UserId__2DE6D218");
+                    .HasConstraintName("FK__UserCard__UserId__17036CC0");
             });
 
             OnModelCreatingPartial(modelBuilder);
