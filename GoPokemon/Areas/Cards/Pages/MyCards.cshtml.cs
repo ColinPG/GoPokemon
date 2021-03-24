@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using GoPokemon.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GoPokemon.Areas.Cards
 {
+    [Authorize]
     public class MyCardsIndexModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;
@@ -32,7 +34,63 @@ namespace GoPokemon.Areas.Cards
             //Cards = await _context.Cards.Include(a => a.Set).OrderBy(a => a.CollectionNumber).ToListAsync();
             return Page();
         }
-        public async Task<IActionResult> OnPostAsync(string conditionId, string cardId)
+
+        public async Task<IActionResult> OnPostAdd(string conditionId, string cardId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var userCard = _context.UserCards
+                .Where(a => a.ConditionId == conditionId)
+                .Where(a => a.CardId == cardId)
+                .Where(a => a.UserId == user.Id)
+                .FirstOrDefault();
+            if (userCard != null)
+            {
+                // Add to quantity
+                userCard.Quantity++;
+                _context.UserCards.Update(userCard);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                // Card isn't found, return with error and no changes to db
+                TempData["message"] = "Card not found.";
+            }
+            userCards = await _context.UserCards.Include(a => a.Condition).Include(a => a.Card).ToListAsync();
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostSubtract(string conditionId, string cardId)
+        {
+            var user = await _userManager.GetUserAsync(User);
+            var userCard = _context.UserCards
+                .Where(a => a.ConditionId == conditionId)
+                .Where(a => a.CardId == cardId)
+                .Where(a => a.UserId == user.Id)
+                .FirstOrDefault(); 
+            if (userCard != null)
+            {
+                // Subtract from quantity
+                userCard.Quantity--;
+                _context.UserCards.Update(userCard);
+                await _context.SaveChangesAsync();
+
+                if (userCard.Quantity <=0)
+                {
+                    // Remove from db
+                    _context.UserCards.Remove(userCard);
+                    await _context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                // Card isn't found, return with error and no changes to db
+                TempData["message"] = "Card not found.";
+            }
+            userCards = await _context.UserCards.Include(a => a.Condition).Include(a => a.Card).ToListAsync();
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostRemove(string conditionId, string cardId)
         {
             //Remove Card
             var user = await _userManager.GetUserAsync(User);

@@ -11,9 +11,11 @@ using GoPokemon.Models;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace GoPokemon.Areas.Cards.Views
 {
+    [Authorize]
     public class UploadCardModel : PageModel
     {
         private readonly UserManager<IdentityUser> _userManager;

@@ -7,9 +7,9 @@
 </div>
 
 <!-- Flip Card-->
-<center>
+@*<center>
     <h1>This is an Example of your scanned cards</h1>
-</center>
+</center>*@
 <!--<div class="wrapper">-->
 @foreach (var item in Model.userCards)
 {
@@ -26,12 +26,10 @@
         <p>@item.Set.Name</p>
         <p>Quantity: ??</p>
         <p>Value: ??</p>*@
-                <div>
-                    <button type="button" style="margin-top: auto">Add</button>
-                    <button type="button" style="margin-top: auto">Subtract</button>
-                </div>
-                <form asp-page-handler="Remove" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId" method="post">
-                    <button id="@item.CardId" class="btn btn-primary">Remove</button>
+                <form method="post">
+                    <button asp-page-handler="Add" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId">Add</button>
+                    <button asp-page-handler="Subtract" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId">Subtract</button>
+                    <button asp-page-handler="Remove" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId" class="btn btn-primary">Remove</button>
                 </form>
             </div>
         </div>
