@@ -1044,3 +1044,4 @@ C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemonTests\obj\D
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemonTests\obj\Debug\net5.0\ref\GoPokemonTests.dll
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemonTests\obj\Debug\net5.0\GoPokemonTests.pdb
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemonTests\obj\Debug\net5.0\GoPokemonTests.genruntimeconfig.cache
+C:\Users\colin\source\repos\GoPokemon\GoPokemonTests\bin\Debug\net5.0\GoPokemon.StaticWebAssets.xml

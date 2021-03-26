@@ -272,14 +272,10 @@ namespace GoPokemon.Models
 
             modelBuilder.Entity<UserCard>(entity =>
             {
-                entity.HasKey(e => new { e.UserId, e.CardId })
-                    .HasName("PK__UserCard__E2D72096F7DA81F0");
+                entity.HasKey(e => new { e.UserId, e.CardId, e.ConditionId })
+                    .HasName("PK__UserCard__2CE0D5568709916C");
 
                 entity.ToTable("UserCard");
-
-                entity.Property(e => e.ConditionId)
-                    .IsRequired()
-                    .HasMaxLength(450);
 
                 entity.Property(e => e.DateCreated)
                     .HasColumnType("datetime")
@@ -294,19 +290,19 @@ namespace GoPokemon.Models
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.CardId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__CardId__540C7B00");
+                    .HasConstraintName("FK__UserCard__CardId__65370702");
 
                 entity.HasOne(d => d.Condition)
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.ConditionId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__Condit__55009F39");
+                    .HasConstraintName("FK__UserCard__Condit__662B2B3B");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.UserCards)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__UserCard__UserId__531856C7");
+                    .HasConstraintName("FK__UserCard__UserId__6442E2C9");
             });
 
             OnModelCreatingPartial(modelBuilder);

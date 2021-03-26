@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\justi\\Desktop\\Conestoga\\Capstone\\Website\\GoPokemon\\GoPokemon\\GoPokemon.csproj": {}
+    "C:\\Users\\colin\\source\\repos\\GoPokemon\\GoPokemon\\GoPokemon.csproj": {}
   },
   "projects": {
-    "C:\\Users\\justi\\Desktop\\Conestoga\\Capstone\\Website\\GoPokemon\\GoPokemon\\GoPokemon.csproj": {
+    "C:\\Users\\colin\\source\\repos\\GoPokemon\\GoPokemon\\GoPokemon.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\justi\\Desktop\\Conestoga\\Capstone\\Website\\GoPokemon\\GoPokemon\\GoPokemon.csproj",
+        "projectUniqueName": "C:\\Users\\colin\\source\\repos\\GoPokemon\\GoPokemon\\GoPokemon.csproj",
         "projectName": "GoPokemon",
-        "projectPath": "C:\\Users\\justi\\Desktop\\Conestoga\\Capstone\\Website\\GoPokemon\\GoPokemon\\GoPokemon.csproj",
-        "packagesPath": "C:\\Users\\justi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\justi\\Desktop\\Conestoga\\Capstone\\Website\\GoPokemon\\GoPokemon\\obj\\",
+        "projectPath": "C:\\Users\\colin\\source\\repos\\GoPokemon\\GoPokemon\\GoPokemon.csproj",
+        "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\colin\\source\\repos\\GoPokemon\\GoPokemon\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\justi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\colin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }

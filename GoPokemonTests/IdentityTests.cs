@@ -5,7 +5,6 @@ namespace GoPokemonTests
 {
     public class IdentityTests : DriverTest
     {
-        protected const string loginUrl = "Identity/Account/Login";
         protected const string profileUrl = "Identity/Account/Manage";
 
         public IdentityTests()
@@ -24,25 +23,6 @@ namespace GoPokemonTests
             Assert.IsNotNull(logoutLink);
         }
 
-        private void Login()
-        {
-            driver.Navigate().GoToUrl(homeURL + loginUrl);
-            //Accept cookies, if not accepted already.
-            try
-            {
-                IWebElement cookiesLink = driver.FindElement(By.ClassName("accept-policy"));
-                cookiesLink.Click();
-            }
-            catch { }
-
-            //Input_UserName
-            IWebElement usernameTextbox = driver.FindElement(By.Id("Input_Email"));
-            usernameTextbox.SendKeys(testUsername);
-            //Input_Password
-            IWebElement passwordTextbox = driver.FindElement(By.Id("Input_Password"));
-            passwordTextbox.SendKeys(testPassword);
-            usernameTextbox.Submit();
-        }
 
         [Test]
         public void Identity_Logout_LoggedOut()

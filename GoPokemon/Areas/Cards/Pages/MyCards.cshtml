@@ -19,9 +19,9 @@
                 <img src="~/img/@(item.Card.Name +".jpg")" alt="@(item.Card.Name + " Card")" style="width:300px;height:300px;">
             </div>
             <div class="flip-card-back" style="background-color:yellow; color:black;">
-                <h1>@item.Card.Name</h1>
-                <p>@item.Quantity</p>
-                <p>@item.Condition.Name</p>
+                <h1 id="Name">@item.Card.Name</h1>
+                <p id="Quantity">@item.Quantity</p>
+                <p id="ConditionName">@item.Condition.Name</p>
                 @*<p><bold>Collection Number: </bold>@item.CollectionNumber</p>
         <p>@item.Set.Name</p>
         <p>Quantity: ??</p>
@@ -29,7 +29,7 @@
                 <form method="post">
                     <button asp-page-handler="Add" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId">Add</button>
                     <button asp-page-handler="Subtract" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId">Subtract</button>
-                    <button asp-page-handler="Remove" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId" class="btn btn-primary">Remove</button>
+                    <button id="Remove" asp-page-handler="Remove" asp-route-conditionId="@item.ConditionId" asp-route-cardId="@item.CardId" class="btn btn-primary">Remove</button>
                 </form>
             </div>
         </div>

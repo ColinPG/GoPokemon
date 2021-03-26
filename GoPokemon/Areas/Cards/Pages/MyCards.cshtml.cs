@@ -29,9 +29,7 @@ namespace GoPokemon.Areas.Cards
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
-            userCards = await _context.UserCards.Include(a => a.Condition).Include(a => a.Card).ToListAsync();
-            //Cards = await _context.Cards.Include(a => a.Set).OrderBy(a => a.CollectionNumber).ToListAsync();
-            //Cards = await _context.Cards.Include(a => a.Set).OrderBy(a => a.CollectionNumber).ToListAsync();
+            userCards = await _context.UserCards.Where(a => a.UserId == user.Id).Include(a => a.Condition).Include(a => a.Card).ToListAsync();
             return Page();
         }
 
@@ -55,7 +53,7 @@ namespace GoPokemon.Areas.Cards
                 // Card isn't found, return with error and no changes to db
                 TempData["message"] = "Card not found.";
             }
-            userCards = await _context.UserCards.Include(a => a.Condition).Include(a => a.Card).ToListAsync();
+            userCards = await _context.UserCards.Where(a => a.UserId == user.Id).Include(a => a.Condition).Include(a => a.Card).ToListAsync();
             return Page();
         }
 
@@ -86,7 +84,7 @@ namespace GoPokemon.Areas.Cards
                 // Card isn't found, return with error and no changes to db
                 TempData["message"] = "Card not found.";
             }
-            userCards = await _context.UserCards.Include(a => a.Condition).Include(a => a.Card).ToListAsync();
+            userCards = await _context.UserCards.Where(a => a.UserId == user.Id).Include(a => a.Condition).Include(a => a.Card).ToListAsync();
             return Page();
         }
 
@@ -110,8 +108,8 @@ namespace GoPokemon.Areas.Cards
                 // Card isn't found, return with error and no changes to db
                 TempData["message"] = "Card not found.";
             }
-            userCards = await _context.UserCards.Include(a => a.Condition).Include(a => a.Card).ToListAsync();
-            return Page();
+            userCards = await _context.UserCards.Where(a => a.UserId == user.Id).Include(a => a.Condition).Include(a => a.Card).ToListAsync();
+            return RedirectToPage();
         }
     }
 }

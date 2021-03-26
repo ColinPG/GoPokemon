@@ -74,7 +74,7 @@ namespace GoPokemon.Areas.Cards.Views
                 // Create a new usercard if no usercard exists
                 var user = await _userManager.GetUserAsync(User);
                 Card card = _context.Cards.Where(a => a.Name == Input.CardName).First();
-                var isInUserCards = _context.UserCards.Where(a => a.CardId == card.Id && a.UserId == user.Id).Any();
+                var isInUserCards = _context.UserCards.Where(a => a.CardId == card.Id && a.UserId == user.Id && condition.ToString() == a.ConditionId).Any();
                 // blank UserCard
                 UserCard newCard;
                 if (!isInUserCards)
@@ -91,9 +91,9 @@ namespace GoPokemon.Areas.Cards.Views
                 }
                 else
                 {
-                    newCard =  _context.UserCards.Where(a => a.CardId == card.Id && a.UserId == user.Id).First();
+                    newCard =  _context.UserCards.Where(a => a.CardId == card.Id && a.UserId == user.Id && condition.ToString() == a.ConditionId).First();
+                    newCard.Quantity += quantity;
                     _context.UserCards.Update(newCard);
-                    //newCard.Quantity+= Quantity;
                 }
                 _context.SaveChanges();
 
@@ -101,6 +101,7 @@ namespace GoPokemon.Areas.Cards.Views
                 return RedirectToPage("ResultCard");
 
             }
+            Cards = await _context.Cards.Include(a => a.Set).OrderBy(a => a.CollectionNumber).ToListAsync();
             return Page();
         }
     }
