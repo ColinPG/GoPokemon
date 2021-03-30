@@ -11,5 +11,6 @@
     <Controller_SelectedScaffolderID>MvcControllerWithContextScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_ControllerDialogWidth>600</WebStackScaffolding_ControllerDialogWidth>
+    <NameOfLastUsedPublishProfile>GoPokemon20210326184003 - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

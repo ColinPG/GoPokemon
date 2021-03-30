@@ -8,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using GoPokemon.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using System.IO;
+using System.Text;
 
 namespace GoPokemon.Areas.Cards
 {
