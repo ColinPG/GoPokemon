@@ -4,51 +4,55 @@
 }
 <div class="text-center">
     <img src="~/img/CardIndex.png" style="width:100%; height:auto;" />
-    <h1>Base Set</h1>
+
 </div>
 <!-- Iterate through all cards here
 foreach (var item in Model.Cards) -->
 @*<div class="wrapper">*@
-    @for (int i = 0; i < 102; i++)
-    {
-        <div class="flip-card" style="display: inline-block"> 
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
+
+@for (int j = 0; j < Model.Sets.Count; j++)
+{
+    <button type="button" class="collapsible">@Model.Sets[j].Name Set</button>
+    @*<center><h1>@Model.Sets[j].Name Set</h1></center>*@
+    //This will be the collapsable contianer
+    <div class="content">
+        @for (int i = 0; i < Model.Cards.Count; i++)
+        {
+            if (Model.Cards[i].SetId == Model.Sets[j].Id)
+            {
+                <div class="flip-card" style="display: inline-block">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="~/img/@Model.Sets[j].Name/@(@Model.Cards[i].CollectionNumber + ".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
+                        </div>
+                        <div class="flip-card-back" style="background-color:yellow; color:black;">
+                            <h1>@Model.Cards[i].Name</h1>
+                            <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
+                            <p>@Model.Cards[i].Set.Name</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flip-card-back" style="background-color:yellow; color:black;">
-                    <h1>@Model.Cards[i].Name</h1>
-                    <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
-                    <p>@Model.Cards[i].Set.Name</p>
-                </div>
-            </div>
-        </div>
-        @*i++;
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
-                </div>
-                <div class="flip-card-back" style="background-color:yellow;color:black;">
-                    <h1>@Model.Cards[i].Name</h1>
-                    <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
-                    <p>@Model.Cards[i].Set.Name</p>
-                </div>
-            </div>
-        </div>
-        i++;
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <img src="~/img/@(Model.Cards[i].Name +".jpg")" alt="@(Model.Cards[i].Name + " Card")" style="width:300px;height:300px;">
-                </div>
-                <div class="flip-card-back" style="background-color:yellow;color:black;" >
-                    <h1>@Model.Cards[i].Name</h1>
-                    <p><bold>Collection Number: </bold>@Model.Cards[i].CollectionNumber</p>
-                    <p>@Model.Cards[i].Set.Name</p>
-                </div>
-            </div>
-        </div>*@
+            }
+
+        }
+
+    </div>
+}
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
     }
-@*</div>*@
+  });
+}
+</script>
+
 

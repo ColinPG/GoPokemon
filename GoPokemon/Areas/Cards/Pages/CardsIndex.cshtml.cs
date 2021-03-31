@@ -14,6 +14,8 @@ namespace GoPokemon.Areas.Cards
         private GoPokemonContext _context;
         [BindProperty]
         public List<Card> Cards { get; set; }
+        [BindProperty]
+        public List<CardSet> Sets { get; set; }
 
         public CardsIndexModel(GoPokemonContext context)
         {
@@ -23,6 +25,7 @@ namespace GoPokemon.Areas.Cards
         public async Task<IActionResult> OnGetAsync() 
         {
             Cards = await _context.Cards.Include(a => a.Set).OrderBy(a => a.CollectionNumber).ToListAsync();
+            Sets = await _context.CardSets.Include(a => a.Cards).ToListAsync();
             return Page();
         }
     }
