@@ -5,7 +5,7 @@
 <div class="text-center">
     <img src="~/img/ScannedCards.png" style="width:100%; height:auto;"/>
 </div>
-
+@Html.ActionLink("Download", "DownloadFile", "Home", new { id = Model.userCards.FirstOrDefault().UserId })
 <!-- Flip Card-->
 @*<center>
     <h1>This is an Example of your scanned cards</h1>
