@@ -426,7 +426,6 @@ C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\bin\Debug\
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\bin\Debug\net5.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.AssemblyInfoInputs.cache
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.AssemblyInfo.cs
@@ -988,3 +987,4 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.genru
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\MyCards.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\MyCards.cshtml.g.cs
+C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache

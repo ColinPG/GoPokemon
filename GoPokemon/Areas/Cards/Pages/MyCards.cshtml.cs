@@ -31,7 +31,7 @@ namespace GoPokemon.Areas.Cards
         public async Task<IActionResult> OnGetAsync()
         {
             var user = await _userManager.GetUserAsync(User);
-            userCards = await _context.UserCards.Where(a => a.UserId == user.Id).Include(a => a.Condition).Include(a => a.Card).ToListAsync();
+            userCards = await _context.UserCards.Where(a => a.UserId == user.Id).Include(a => a.Condition).Include(a => a.Card).Include(a => a.Card.Set).ToListAsync();
             return Page();
         }
 

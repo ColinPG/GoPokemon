@@ -3,7 +3,7 @@
 @{
 }
 <div class="text-center">
-    
+
     <img src="~/img/UploadPokeFont.png" style="width:100%; height:auto;" />
     <form enctype="multipart/form-data" method="post">
         <dl>
@@ -37,11 +37,20 @@
         <dl>
             <label asp-for="@Model.Input.Condition">Condiiton</label>
             <select asp-for="@Model.Input.Condition">
-                    <option value="1">Mint</option>
-                    <option value="2">Near Mint</option>
-                    <option value="3">Played</option>                
+                <option value="1">Mint</option>
+                <option value="2">Near Mint</option>
+                <option value="3">Played</option>
             </select>
         </dl>
         <input id="submit" class="btn" type="submit" value="Upload" />
     </form>
+
+
+
+    <script src="~/js/tf.min.js"></script>
+    <script src="~/js/javaClass.js"></script>
+
+    <input id="userInput" type="text"></input>
+
+    <button onclick="predict(model)">Predict</button>
 </div>
