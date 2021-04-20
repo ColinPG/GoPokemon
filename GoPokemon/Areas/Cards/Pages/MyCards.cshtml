@@ -5,7 +5,14 @@
 <div class="text-center">
     <img src="~/img/ScannedCards.png" style="width:100%; height:auto;"/>
 </div>
-@Html.ActionLink("Download", "DownloadFile", "Home", new { id = Model.userCards.FirstOrDefault().UserId })
+@if(Model.userCards.Count != 0)
+{
+<div id="download">
+     <center ><h1 class="btn-warning">@Html.ActionLink("Download Your Card Information", "DownloadFile", "Home", new { id = Model.userCards.FirstOrDefault().UserId})</h1></center>
+</div>
+}
+
+
 <!-- Flip Card-->
 @*<center>
     <h1>This is an Example of your scanned cards</h1>
@@ -20,8 +27,9 @@
             </div>
             <div class="flip-card-back" style="background-color:yellow; color:black;">
                 <h1 id="Name">@item.Card.Name</h1>
-                <p id="Quantity">@item.Quantity</p>
-                <p id="ConditionName">@item.Condition.Name</p>
+                <p id="Quantity">Quantity: @item.Quantity</p>
+                <p id="ConditionName">Condition: @item.Condition.Name</p>
+                <p id="Value">Value: @item.Card.Value</p>
                 @*<p><bold>Collection Number: </bold>@item.CollectionNumber</p>
         <p>@item.Set.Name</p>
         <p>Quantity: ??</p>

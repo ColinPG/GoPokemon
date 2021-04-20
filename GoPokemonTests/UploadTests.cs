@@ -13,7 +13,7 @@ namespace GoPokemonTests
     {
         protected const string uploadURL = "Cards/UploadCard";
         private string resultURL = "Cards/ResultCard";
-        private const string testImageFilePath = "C:/GoPokemonLogo.png";
+        private const string testImageFilePath = "C:/Users/justi/Desktop/NerPokemonCardPics/Train/Monster/1.jpg";
 
         [Test]
         public void UploadPage_NavigateToUploadPageAsUser_URLisUploadPage()
