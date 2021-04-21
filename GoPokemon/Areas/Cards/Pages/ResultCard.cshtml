@@ -4,8 +4,9 @@
 }
 <div class="text-center">
     <h1>Your Uploaded Image:</h1>
-    <img src="~/CardImages/@TempData["imageKey"]" />
+    <img id="image" src="~/CardImages/@TempData["imageKey"]" />
     <div id="result"></div>
+    <input type="button" value="Predict" class="button" onclick="predict();" />
 </div>
 
 <script src="~/js/tf.min.js"></script>

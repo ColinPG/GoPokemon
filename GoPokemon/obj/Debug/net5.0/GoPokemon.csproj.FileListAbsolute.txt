@@ -984,7 +984,7 @@ C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.dll
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\ref\GoPokemon.dll
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.pdb
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.genruntimeconfig.cache
-C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\MyCards.cshtml.g.cs
 C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\Razor\Areas\Cards\Pages\MyCards.cshtml.g.cs
 C:\Users\justi\Desktop\Conestoga\Capstone\Website\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache
+C:\Users\colin\source\repos\GoPokemon\GoPokemon\obj\Debug\net5.0\GoPokemon.csprojAssemblyReference.cache
