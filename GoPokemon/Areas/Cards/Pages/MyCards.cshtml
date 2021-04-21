@@ -8,7 +8,7 @@
 @if(Model.userCards.Count != 0)
 {
 <div id="download">
-     <center ><h1 class="btn-warning">@Html.ActionLink("Download Your Card Information", "DownloadFile", "Home", new { id = Model.userCards.FirstOrDefault().UserId})</h1></center>
+     <center><h1 class="btn-warning">@Html.ActionLink("Download Your Card Information", "DownloadFile", "Home", new { id = Model.userCards.FirstOrDefault().UserId})</h1></center>
 </div>
 }
 
